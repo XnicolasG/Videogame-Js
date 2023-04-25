@@ -37,10 +37,18 @@ let bombsPositions = [];
 
 function ResizeCanvas() {
     if (window.innerHeight > window.innerWidth) {
-        canvasSize = window.innerWidth * 0.7;
-    } else {
-        canvasSize = window.innerHeight * 0.7;
-    }
+        if ((window, innerWidth < 450)) {
+          canvasSize = 350;
+        } else {
+          canvasSize = (window.innerWidth * 0.7).toFixed(0);
+        }
+    }else {
+        if (window.innerHeight < 450) {
+          canvasSize = 350;
+        } else {
+          canvasSize = (window.innerHeight * 0.7).toFixed(0);
+        }
+      }
 
     // canvasSize = Number(canvasSize.toFixed(0))
 
@@ -48,7 +56,7 @@ function ResizeCanvas() {
     canvas.setAttribute("height", canvasSize)
 
     // console.log({canvasSize, elemntsSize});
-    elemntsSize = canvasSize / 10;
+    elemntsSize = Number((canvasSize / 10).toFixed(0));
     playerPosition.x = undefined
     playerPosition.y = undefined
 

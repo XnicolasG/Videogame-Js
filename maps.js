@@ -4,7 +4,7 @@ const emojis = {
   'X': '💣',
   'I': '🎁',
   'HEART': '❤️',
-  'PLAYER': '🏃🏻‍♂️',
+  'PLAYER': '💀',
   'BOMB_COLLISION': '🔥',
   'GAME_OVER': '👎',
   'WIN': '🏆',
